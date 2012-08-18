@@ -1,0 +1,15 @@
+[ {
+   "devtoolsFrontendUrl": "/devtools/devtools.html?ws=localhost:9222/devtools/page/16_1",
+   "faviconUrl": "http://www.google.com/favicon.ico",
+   "thumbnailUrl": "/thumb/http://www.google.com/",
+   "title": "Google",
+   "url": "http://www.google.com/",
+   "webSocketDebuggerUrl": "ws://localhost:9222/devtools/page/16_1"
+}, {
+   "devtoolsFrontendUrl": "/devtools/devtools.html?ws=localhost:9222/devtools/page/18_1",
+   "faviconUrl": "http://twitter.com/favicons/favicon.ico",
+   "thumbnailUrl": "/thumb/http://twitter.com/",
+   "title": "Twitter",
+   "url": "http://twitter.com/",
+   "webSocketDebuggerUrl": "ws://localhost:9222/devtools/page/18_1"
+} ]

@@ -1,0 +1,31 @@
+
+Chrome.new("ip", "port")
+
+chrome.connect
+chrome.disconnect
+
+chrome.pages.count
+chrome.pages[0]
+chrome.pages[/url/]
+chrome.pages[/title/]
+
+page.favicon
+page.title
+page.url
+page.websocket
+page.frontend
+
+page.reload({
+    nocache: true,
+    script: "var i = 0 ..."
+})
+page.navigate(url)
+page.disable
+page.enable
+
+"devtoolsFrontendUrl": "/devtools/devtools.html?ws=localhost:9222/devtools/page/7_1",
+"faviconUrl": "http://twitter.com/favicons/favicon.ico",
+"thumbnailUrl": "/thumb/http://twitter.com/#!/search/chrome?q=chrome&28",
+"title": "(1227) Twitter / Search - chrome",
+"url": "http://twitter.com/#!/search/chrome?q=chrome&28",
+"webSocketDebuggerUrl": "ws://localhost:9222/devtools/page/7_1"

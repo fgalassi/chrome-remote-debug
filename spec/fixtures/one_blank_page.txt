@@ -1,0 +1,8 @@
+[ {
+   "devtoolsFrontendUrl": "/devtools/devtools.html?ws=localhost:9222/devtools/page/14_1",
+   "faviconUrl": "",
+   "thumbnailUrl": "/thumb/chrome://newtab/",
+   "title": "New Tab",
+   "url": "chrome://newtab/",
+   "webSocketDebuggerUrl": "ws://localhost:9222/devtools/page/14_1"
+} ]
