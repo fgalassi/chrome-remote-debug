@@ -1,5 +1,6 @@
 require "net/http"
 require "json"
+require_relative "../vendor/web-socket-ruby/lib/web_socket"
 
 module ChromeRemoteDebug
   class Client
@@ -30,6 +31,31 @@ module ChromeRemoteDebug
     def title
       @spec["title"]
     end
-  end
-end
 
+    def reload
+      ws = ::WebSocket.new(@spec["webSocketDebuggerUrl"])
+      ws.send(JSON.generate(Command.new("Page.reload")))
+      ws.close()
+    end
+  end
+
+  class Command
+    @@id = 1
+
+    def initialize(method, params = {})
+      @method = method
+      @params = params
+      @id = @@id
+      @@id += 1
+    end
+
+    def id
+      @id
+    end
+
+    def to_json(*a)
+      { "id" => id, "method" => @method, "params" => @params }.to_json(*a)
+    end
+  end
+
+end

@@ -29,4 +29,31 @@ describe ChromeRemoteDebug::Page do
     end
   end
 
+  describe "reload" do
+    before do
+      @page = ChromeRemoteDebug::Page.new(@page_spec)
+      @websocket = double()
+      @websocket.stub(:send)
+      @websocket.stub(:close)
+    end
+
+    it "should connect to page websocket" do
+      WebSocket.should_receive(:new).with(@page_spec["webSocketDebuggerUrl"]).and_return(@websocket)
+      @page.reload
+    end
+
+    it "should send a reload command" do
+      WebSocket.stub(:new => @websocket)
+      @websocket.should_receive(:send).with(/reload/)
+      @page.reload
+    end
+
+    it "should disconnect" do
+      WebSocket.stub(:new => @websocket)
+      @websocket.should_receive(:send)
+      @websocket.should_receive(:close)
+      @page.reload
+    end
+  end
+
 end
