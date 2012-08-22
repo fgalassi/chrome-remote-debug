@@ -1,4 +1,4 @@
-# Chrome Remote Debug
+# Chrome Remote Debug [![Build Status](https://secure.travis-ci.org/fgalassi/chrome-remote-debug.png)](http://travis-ci.org/fgalassi/chrome-remote-debug)
 
 Ruby client library for the Google Chrome Remote Debugging Protocol.
 
