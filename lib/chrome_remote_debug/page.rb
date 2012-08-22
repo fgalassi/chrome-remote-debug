@@ -25,5 +25,11 @@ module ChromeRemoteDebug
       ws.send(JSON.generate(Command.new("Page.reload")))
       ws.close()
     end
+
+    def navigate(url)
+      ws = ::WebSocket.new(@spec["webSocketDebuggerUrl"])
+      ws.send(JSON.generate(Command.new("Page.navigate", :url => url)))
+      ws.close()
+    end
   end
 end

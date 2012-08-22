@@ -6,6 +6,7 @@ Client for the Google Chrome Remote Debugging Protocol.
 
 * Get page list
 * Page.reload
+* Page.navigate
 
 ## Todo
 

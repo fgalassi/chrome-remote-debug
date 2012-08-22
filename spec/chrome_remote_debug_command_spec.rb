@@ -44,6 +44,7 @@ describe ChromeRemoteDebug::Command do
     before do
       ChromeRemoteDebug::Command.class_variable_set :@@id, 1
     end
+
     it "should be serializable to json" do
       command = ChromeRemoteDebug::Command.new(
         "method", :param1 => "1", :param2 => "2"

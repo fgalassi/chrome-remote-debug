@@ -56,4 +56,33 @@ describe ChromeRemoteDebug::Page do
     end
   end
 
+  # TODO: remove duplication
+  describe "navigate" do
+    before do
+      @page = ChromeRemoteDebug::Page.new(@page_spec)
+      @websocket = double()
+      @websocket.stub(:send)
+      @websocket.stub(:close)
+      @url = "http://www.google.com"
+    end
+
+    it "should connect to page websocket" do
+      WebSocket.should_receive(:new).with(@page_spec["webSocketDebuggerUrl"]).and_return(@websocket)
+      @page.navigate(@url)
+    end
+
+    it "should send a navigate command" do
+      WebSocket.stub(:new => @websocket)
+      @websocket.should_receive(:send).with(/navigate/).with(/#{@url}/)
+      @page.navigate(@url)
+    end
+
+    it "should disconnect" do
+      WebSocket.stub(:new => @websocket)
+      @websocket.should_receive(:send)
+      @websocket.should_receive(:close)
+      @page.navigate(@url)
+    end
+  end
+
 end
