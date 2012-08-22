@@ -1,6 +1,6 @@
 # Chrome Remote Debug
 
-Client for the Google Chrome Remote Debugging Protocol.
+Ruby client library for the Google Chrome Remote Debugging Protocol.
 
 ## Done
 
