@@ -2,6 +2,9 @@
 
 Ruby client library for the Google Chrome Remote Debugging Protocol.
 
+## Install
+gem install chrome_remote_debug
+
 ## Usage
 
 ### Client Object
