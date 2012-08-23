@@ -8,7 +8,7 @@ Ruby client library for the Google Chrome Remote Debugging Protocol.
 
 ## Install
 ```bash
-gem install chrome_remote_debug
+$> gem install chrome_remote_debug
 ```
 
 ## Usage
@@ -53,3 +53,8 @@ page.navigate("http://www.google.com")
 ## Author
 
 * Federico Galassi <federico.galassi@cleancode.it>
+
+## License
+
+- MIT License
+- Copyright (c) 2012 Federico Galassi
