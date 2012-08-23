@@ -8,6 +8,8 @@ Gem::Specification.new do |s|
   s.summary     = "Ruby client library for the Google Chrome Remote Debugging Protocol."
   s.description = s.summary
 
+  spec.required_ruby_version = '>= 1.8.7'
+
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
   s.add_development_dependency "webmock"

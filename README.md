@@ -2,8 +2,14 @@
 
 Ruby client library for the Google Chrome Remote Debugging Protocol.
 
+## Requirements
+- ruby >= 1.8.7
+- *nix system (linux, mac os x, etc..), windows don't know.
+
 ## Install
+```bash
 gem install chrome_remote_debug
+```
 
 ## Usage
 
@@ -19,8 +25,8 @@ chrome.pages
 ### Page Object
 
 ```ruby
-# Pages are ordered. This is the first tab in chrome.
-page = chrome.pages[0]
+# Get the first page in chrome
+page = chrome.pages.first
 # Title of the page
 page.title
 # Url of the page

@@ -1,3 +1,3 @@
-require_relative "chrome_remote_debug/command"
-require_relative "chrome_remote_debug/page"
-require_relative "chrome_remote_debug/client"
+require "#{File.dirname(__FILE__)}/chrome_remote_debug/command"
+require "#{File.dirname(__FILE__)}/chrome_remote_debug/page"
+require "#{File.dirname(__FILE__)}/chrome_remote_debug/client"

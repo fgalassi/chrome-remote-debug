@@ -1,4 +1,4 @@
-require_relative "../lib/chrome_remote_debug.rb"
+require "#{File.dirname(__FILE__)}/../lib/chrome_remote_debug.rb"
 require "webmock/rspec"
 
 # force expect syntax

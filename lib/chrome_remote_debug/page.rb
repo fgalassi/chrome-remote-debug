@@ -1,5 +1,5 @@
 require "json"
-require_relative "../../vendor/web-socket-ruby/lib/web_socket"
+require "#{File.dirname(__FILE__)}/../../vendor/web-socket-ruby/lib/web_socket"
 
 
 module ChromeRemoteDebug

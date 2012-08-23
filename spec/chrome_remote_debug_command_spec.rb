@@ -1,4 +1,4 @@
-require_relative "spec_helper.rb"
+require "#{File.dirname(__FILE__)}/spec_helper.rb"
 
 describe ChromeRemoteDebug::Command do
 
@@ -22,7 +22,7 @@ describe ChromeRemoteDebug::Command do
 
   describe "id" do
     before do
-      ChromeRemoteDebug::Command.class_variable_set :@@id, 1
+      ChromeRemoteDebug::Command.reset_id
       @command = ChromeRemoteDebug::Command.new(
         "method", :param1 => "1", :param2 => "2"
       )
@@ -42,22 +42,22 @@ describe ChromeRemoteDebug::Command do
 
   describe "serialization" do
     before do
-      ChromeRemoteDebug::Command.class_variable_set :@@id, 1
+      ChromeRemoteDebug::Command.reset_id
     end
 
     it "should be serializable to json" do
       command = ChromeRemoteDebug::Command.new(
         "method", :param1 => "1", :param2 => "2"
       )
-      expect(command.to_json).to eq(
-        JSON.generate({
+      expect(JSON.parse(command.to_json)).to eq(
+        {
           "id" => 1,
           "method" => "method",
           "params" => {
             "param1" => "1",
             "param2" => "2"
           }
-        })
+        }
     )
     end
 

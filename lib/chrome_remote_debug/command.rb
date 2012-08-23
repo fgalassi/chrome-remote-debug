@@ -4,6 +4,10 @@ module ChromeRemoteDebug
   class Command
     @@id = 1
 
+    def self.reset_id
+      @@id = 1
+    end
+
     def initialize(method, params = {})
       @method = method
       @params = params
