@@ -1,6 +1,8 @@
+require "#{File.dirname(__FILE__)}/lib/chrome_remote_debug/version"
+
 Gem::Specification.new do |s|
   s.name        = "chrome_remote_debug"
-  s.version     = "0.0.1"
+  s.version     = ChromeRemoteDebug::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Federico Galassi"]
   s.email       = ["federico.galassi@cleancode.it"]
